@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Budget Analyzer</title>
+</head>
+<body>
+<h1>Personal Budget Analyzer</h1>
+<h3>Track Your Spending. Build Better Habits.</h3>
+<nav> <!--Start of navigation method-->
+    <ul>
+        <li><a href="Home Dashboard.html">Home</a></li>
+        <li><a href="Income & Expenses.html">Income & Expenses</a></li>
+        <li><a href="Savings Goals.html">Savings Goals</a></li>
+        <li><a href="About.html">About</a></li>
+    </ul>
+</nav>
+</body>
+</html>
