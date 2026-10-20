@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Income & Expenses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Personal Budget Analyzer</h1>
+<h3>Track Your Spending. Build Better Habits.</h3>
+<body> <!-- container for visible elements on a webpage -->
+<nav class="vertical-nav"> <!-- creates vertical buttons for movement between sites -->
+    <a href="finances.php" class="nav-btn active">Input your Finances</a> <br>
+    <a href="dashboard.php" class="nav-btn active">See Your Spending Dashboard</a> <br>
+    <a href="about.php" class="nav-btn active">About Page</a>
+</nav> <br> <br>
+
+<h2>Monthly Spending Analyzer</h2>
+<!-- The form submits to the same page using the POST method -->
+<form method="POST" action="">
+    <label for="num1">Monthly Net Income:</label>
+    <input type="number" step="any" name="num1" id="num1" required><br><br>
+
+    <label for="num2">Cost of Rent:</label>
+    <input type="number" step="any" name="num2" id="num2" required><br><br>
+
+    <label for="num3">Cost of Food:</label>
+    <input type="number" step="any" name="num3" id="num3" required><br><br>
+
+    <label for="num4">Cost of Transportation:</label>
+    <input type="number" step="any" name="num4" id="num4" required><br><br>
+
+    <label for="num5">Miscellaneous Spending:</label>
+    <input type="number" step="any" name="num5" id="num5" required><br><br>
+<br>
+    <input type="submit" name="submit" value="Calculate Remaining Balance">
+</form>
+
+<?php
+// Check if the form has been submitted
+if (isset($_POST['submit'])) {
+    // Retrieve and sanitize user inputs by casting them to floats (allows decimals)
+    $number1 = (float)$_POST['num1'];
+    $number2 = (float)$_POST['num2'];
+    $number3 = (float)$_POST['num3'];
+    $number4 = (float)$_POST['num4'];
+    $number5 = (float)$_POST['num5'];
+
+    // Perform the math
+    $spending = $number1 - ($number2 + $number3 + $number4 + $number5);
+
+    // Display the result safely
+    echo "<h3>Result:</h3>";
+    echo "<p>Your Remaining Monthly Income after Spending is: <strong>$$spending</strong></p>";
+}
+?>
+<br> <br>
+<?php
+if ($spending < 0) {
+$color = 'red';
+} else {
+$color = 'green';
+}
+
+echo '<span style="color: ' . $color . ';">$' . $spending . '</span>';
+?>
+
+<br>
+
+<?php
+if ($spending < 0) {
+    echo "<p>Your Monthly Spending is Greater Than Your Monthly Income</p>";
+} else {
+    echo "<p>Your Monthly Spending is Less Than Your Monthly Income</p>";
+}
+
+?>
+
+<br>
+<?php
+echo "<p>Rent Analysis</p>";
+
+if ($number2 > ($number1 * .3)) {
+echo "<p>Based on your monthly income, your rent is higher than recommended (30%). A lower rent may improve your finances.</p>";
+} else {
+echo "<p>Your cost of rent is within the recommended percentage (30%) of your monthly income.</p>";
+}
+
+?>
+
+<br>
+<?php
+echo "<p>Food Cost Analysis</p>";
+
+if ($number2 > ($number1 * .15)) {
+    echo "<p>Based on your monthly income, your spending on food is higher than recommended (15%). Spending less on food each month may improve your finances.</p>";
+} else {
+    echo "<p>Your cost of rent is within the recommended percentage (15%) of your monthly income.</p>";
+}
+
+?>
+
+<br>
+<?php
+echo "<p>Transportation Cost Analysis</p>";
+
+if ($number2 > ($number1 * .2)) {
+    echo "<p>Based on your monthly income, your spending on transportation is higher than recommended (20%). Spending less on transportation each month may improve your finances.</p>";
+} else {
+    echo "<p>Your cost of transportation is within the recommended percentage (20%) of your monthly income.</p>";
+}
+
+?>
+<br> 
+<?php
+echo "<p>Miscellaneous Cost Analysis</p>";
+
+if ($number2 > ($number1 * .15)) {
+    echo "<p>Based on your monthly income, your spending on miscellaneous is higher than recommended (15%). Lowering extra monthly spending may improve your finances.</p>";
+} else {
+    echo "<p>Your cost of miscellaneous is within the recommended percentage (15%) of your monthly income.</p>";
+}
+
+?>
+</body>
+</html>
