@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Budget Analyzer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Personal Budget Analyzer</h1>
