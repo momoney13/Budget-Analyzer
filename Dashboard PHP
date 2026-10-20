@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Budget Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Personal Budget Analyzer</h1>
+<h3>Track Your Spending. Build Better Habits.</h3>
+<nav class="vertical-nav"> <!-- creates vertical buttons for movement between sites -->
+    <a href="finances.php" class="nav-btn active">Input your Finances</a> <br>
+    <a href="dashboard.php" class="nav-btn active">See Your Spending Dashboard</a> <br>
+    <a href="about.php" class="nav-btn active">About Page</a>
+</nav> <br> <br>
+
+
+
+<h2> Spending Dashboard: </h2> <!-- subheading -->
+
+
+
+</body>
+</html>
