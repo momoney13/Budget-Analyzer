@@ -62,10 +62,10 @@ if (isset($_POST['submit'])) {
     $step6 = $step4 / $step5;
     $step7 = $step6 * $number1;
 
-    // 1. Shift decimal, round up to whole integer, shift decimal back
+    //  Shift decimal, round up to whole integer, shift decimal back
     $step7clean = ceil($step7 * 100) / 100;
 
-// 2. Format to ensure exactly 2 decimal places (handles trailing zeros)
+// Format to ensure exactly 2 decimal places (handles trailing zeros)
     $step7final = number_format($step7clean, 2);
 
     $step2int = $number2 * 100 ;
@@ -75,6 +75,68 @@ if (isset($_POST['submit'])) {
     echo "<p>To Payoff Your Debt of $ $number1 in $number3 Months, with an Interest Rate of $step2int %, Your Monthly Payment Needs to be <strong>$ $step7final </strong>:<p>";
 }
 ?>
+<br> <br>
+
+
+<?php
+//  Define the months and their unique messages in an associative array
+$monthMessages = [
+    "January"   => "Happy Winter, Winter is a good time to budget for the upcoming year!",
+    "February"  => "Happy Winter, Winter is a good time to budget for the upcoming year!",
+    "March"     => "Happy Spring, It's everyone's favorite time of year. Tax Season! Be sure to file accurately!",
+    "April"     => "Happy Spring, It's everyone's favorite time of year. Tax Season! Be sure to file accurately!",
+    "May"       => "Happy Spring, It's everyone's favorite time of year. Tax Season! Be sure to file accurately!",
+    "June"      => "️Happy Summer, Be cautious of higher leisurely spending this time of year!",
+    "July"      => "Happy Summer, Be cautious of higher leisurely spending this time of year!",
+    "August"    => "Happy Summer, Be cautious of higher leisurely spending this time of year!",
+    "September" => "Happy Fall, Make sure your work benefits are in order and prepare for big holiday spending!",
+    "October"   => "Happy Fall, Make sure your work benefits are in order and prepare for big holiday spending!",
+    "November"  => "Happy Fall, Make sure your work benefits are in order and prepare for big holiday spending!",
+    "December"  => "Happy Winter, Winter is a good time to budget for the upcoming year!"
+];
+
+// Initial variables for form submission
+$selectedMonth = "";
+$messageDisplay = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['month'])) {
+    $selectedMonth = $_POST['month'];
+
+    // Check if the selected month exists in the array to prevent errors
+    if (array_key_exists($selectedMonth, $monthMessages)) {
+        $messageDisplay = "<strong>" . htmlspecialchars($selectedMonth) . ":</strong> " . $monthMessages[$selectedMonth];
+    }
+}
+?>
+
+
+<h2>Select a Month for Seasonal Financial Advice</h2>
+
+<!-- HTML Form -->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <label for="month-select">Choose a month:</label>
+    <select name="month" id="month-select" required>
+        <option value="">--Please choose an option--</option>
+
+        <?php
+        // Loop through the array to dynamically generate the dropdown list options
+        foreach ($monthMessages as $month => $message) {
+            // Keep the user's selection selected even after submission
+            $selected = ($month === $selectedMonth) ? "selected" : "";
+            echo "<option value=\"$month\" $selected>$month</option>";
+        }
+        ?>
+
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- 4. Display the unique message if a selection was made -->
+<?php if (!empty($messageDisplay)): ?>
+    <div style="margin-top: 20px; padding: 10px; background-color: #f0f0f0; border-left: 5px solid #007BFF;"> <!-- making the message look nice -->
+        <p><?php echo $messageDisplay; ?></p>
+    </div>
+<?php endif; ?>
 
 </body>
 </html>
