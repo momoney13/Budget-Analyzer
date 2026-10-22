@@ -8,9 +8,24 @@
 <body>
 <h1>Personal Budget Analyzer</h1>
 <h3>Track Your Spending. Build Better Habits.</h3>
-<body> <!-- container for visible elements on a webpage -->
+
+<img src="https://cdn.iconscout.com/icon/free/png-512/free-market-icon-svg-download-png-453340.png?f=webp&w=512" class="top-right-corner"> <!-- adds image -->
+<!-- puts the image in the top right corner -->
+<style>
+    .top-right-corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999; /* Ensures it stays on top of other content */
+        width: 300px;  /* Adjusts size */
+        height: auto;
+    }
+</style>
+
+<!-- container for visible elements on a webpage -->
 <nav class="vertical-nav"> <!-- creates vertical buttons for movement between sites -->
     <a href="finances.php" class="nav-btn active">Input your Finances</a> <br>
+    <a href="debt.php" class="nav-btn active">Debt Payoff Planner</a> <br>
     <a href="dashboard.php" class="nav-btn active">See Your Spending Dashboard</a> <br>
     <a href="about.php" class="nav-btn active">About Page</a>
 </nav> <br> <br>
@@ -49,7 +64,7 @@ if (isset($_POST['submit'])) {
     // Perform the math
     $spending = $number1 - ($number2 + $number3 + $number4 + $number5);
 
-    // Display the result safely
+    // Display the result, followed by IF Statements
     echo "<h3>Result:</h3>";
     echo "<p>Your Remaining Monthly Income after Spending is: <strong>$$spending</strong></p>";
 }
