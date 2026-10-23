@@ -5,6 +5,20 @@
 </head>
 <body>
 
+
+<img src="https://cdn.iconscout.com/icon/free/png-512/free-market-icon-svg-download-png-453340.png?f=webp&w=512" class="top-right-corner"> <!-- adds image -->
+<!-- puts the image in the top right corner -->
+<style>
+    .top-right-corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999; /* Ensures it stays on top of other content */
+        width: 300px;  /* Adjusts size */
+        height: auto;
+    }
+</style>
+
 <div style="text-align: center;">
     <?php
     echo "<h2>Here are the variables from the user form</h2>\n";
@@ -33,7 +47,7 @@
                 "<nav> 
     <a href='finances.php' class='nav-btn active'>Start Budgeting Your Finances</a> <br> <nav>";
 
-                // Note: You can process the variables here (e.g., save to a database or email it)
+
             } else {
                 echo "Invalid email format. Please go back and try again.";
                 echo
