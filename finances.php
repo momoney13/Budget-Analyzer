@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Income & Expenses</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 <h1>Personal Budget Analyzer</h1>
