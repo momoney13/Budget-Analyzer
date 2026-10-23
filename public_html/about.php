@@ -12,6 +12,7 @@
 <img src="https://cdn.iconscout.com/icon/free/png-512/free-market-icon-svg-download-png-453340.png?f=webp&w=512" class="top-right-corner"> <!-- adds image -->
 <!-- puts the image in the top right corner -->
 <style>
+    .top-right-corner {
         position: absolute;
         top: 0;
         right: 0;
