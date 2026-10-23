@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Budget Analyzer</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<h1>Personal Budget Analyzer</h1>
+<h3>Track Your Spending. Build Better Habits.</h3>
+
+<img src="https://cdn.iconscout.com/icon/free/png-512/free-market-icon-svg-download-png-453340.png?f=webp&w=512" class="top-right-corner"> <!-- adds image -->
+<!-- puts the image in the top right corner -->
+<style>
+    .top-right-corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999; /* Ensures it stays on top of other content */
+        width: 100px;  /* Adjusts size */
+        height: auto;
+    }
+</style>
+
+
+<?php // writes PHP welcome
+
+echo "Welcome, Please Enter Your Info to Learn How to Budget Your Finances";
+
+?>
+
+<h2> Please Enter Your: </h2> <!-- subheading -->
+<form action="submit.php" method="POST"> <!-- tells browser where to send form data, POST method -->
+    <label for="firstname">First Name:</label> <br> <!-- first name label -->
+    <input type="text" id="firstname" name="firstname" placeholder="Type your First Name" <br> <br> <br>
+    <label for="lastname">Last Name:</label> <br> <!-- last name label -->
+    <input type="text" id="lastname" name="lastname" placeholder="Type your Last Name" <br><br> <br>
+    <label for="email">Email:</label> <br> <!-- email label -->
+    <input type="text" id="email" name="email" placeholder="Type your Email" <br> <br> <br>
+    <br>
+    <!--   <button type="submit">Submit</button>  form submit button -->
+    <input type="submit" value="Submit"> <!-- form submit button -->
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+
+/* Page and color scheme */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #263449;
+    line-height: 1.6;
+}
+
+/* Header and title */
+h1 {
+    margin: 0;
+    padding: 35px 20px 10px;
+    background-color: #142b4a;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Tagline */
+h3 {
+    margin: 0;
+    padding: 0 20px 35px;
+    background-color: #142b4a;
+    color: #c8d8e8;
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+/* Navigation bar */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #dfe6ee;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 16px 22px;
+    color: #34465e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #e7f4ec;
+    color: #20805a;
+}
+
+/* Other headings */
+h2 {
+    color: #142b4a;
+}
+
+/* Paragraphs */
+p {
+    color: #64748b;
+}
+
+/* Center the Donut Chart (AI help!!) */
+
+.chart-section {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.chart-section h3 {
+    background: none;
+    color: #142b4a;
+    padding: 10px;
+    text-align: center;
+}
+
+.chart-container {
+    width: 500px;
+    height: 540px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+    /* Dashboard Title */
+
+.dashboard-title {
+    text-align: center;
+    color: #142b4a;
+    margin: 30px 0;
+}
+
+/* Financial Summary Cards */
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.summary-card {
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.summary-card h4 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #142b4a;
+    margin: 0;
+}
+
+/* Total Expenses Inside Donut Chart */
+
+.chart-center-text {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    color: #142b4a;
+}
+
+.chart-center-text span {
+    display: block;
+    font-size: 16px;
+}
+
+.chart-center-text strong {
+    display: block;
+    font-size: 26px;
+    margin-top: 5px;
+}
+
+
+    /* (Help from AI) Monthly Spending Analyzer Form */
+
+.analyzer-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.budget-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-top: 25px;
+}
+
+.budget-form h3 {
+    background: none;
+    color: #142b4a;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.budget-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #263449;
+}
+
+.budget-form input[type="number"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #c8d8e8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.budget-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #142b4a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.budget-form input[type="submit"]:hover {
+    background-color: #4a90c3;
+}
+
+/* MONTHLY SPENDING ANALYZER */
+
+.analyzer-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.analyzer-container h2 {
+    color: #142b4a;
+}
+
+/* Form Card */
+
+.budget-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-top: 25px;
+}
+
+.budget-form h3 {
+    background: none;
+    color: #142b4a;
+    padding: 0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.budget-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #263449;
+}
+
+.budget-form input[type="number"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #c8d8e8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Calculate Button */
+
+.budget-form input[type="submit"] {
+    background-color: #142b4a;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.budget-form input[type="submit"]:hover {
+    background-color: #4a90c3;
+}
+
+/* Calculation Results */
+
+.results-card {
+    background-color: white;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.results-card h2 {
+    color: #142b4a;
+}
+
+.balance {
+    font-size: 36px;
+    font-weight: bold;
+    color: #142b4a;
+    margin: 15px 0;
+}
+
+/* Dashboard Confirmation */
+
+.dashboard-notice {
+    background-color: #e8f3fa;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dashboard-notice h3 {
+    background: none;
+    color: #142b4a;
+    padding: 0;
+    text-align: center;
+}
+
+.dashboard-button {
+    display: inline-block;
+    background-color: #142b4a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.dashboard-button:hover {
+    background-color: #4a90c3;
+}
+
+/* Debt Page Container */
+
+.debt-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.debt-container h2 {
+    color: #142b4a;
+}
+
+/* Debt Form */
+
+.debt-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-top: 25px;
+}
+
+.debt-form h3 {
+    background: none;
+    color: #142b4a;
+    padding: 0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.debt-form label {
+    display: block;
+    font-weight: bold;
+    color: #263449;
+    margin-bottom: 8px;
+}
+
+.debt-form input[type="number"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #c8d8e8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input-help {
+    font-size: 14px;
+    color: #66788a;
+    margin: 0 0 8px;
+}
+
+/* Calculate Button */
+
+.debt-form input[type="submit"] {
+    background-color: #142b4a;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.debt-form input[type="submit"]:hover {
+    background-color: #4a90c3;
+}
+
+/* Debt Calculation Results */
+
+.debt-results {
+    background-color: white;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.debt-results h2 {
+    color: #142b4a;
+}
+
+.debt-payment {
+    font-size: 36px;
+    font-weight: bold;
+    color: #142b4a;
+    margin: 20px 0;
+}
+
+.debt-error {
+    color: #b42318;
+    text-align: center;
+}
+
+/* Seasonal Financial Advice */
+
+.seasonal-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.seasonal-container h2 {
+    color: #142b4a;
+}
+
+.seasonal-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-top: 25px;
+}
+
+.seasonal-form label {
+    display: block;
+    font-weight: bold;
+    color: #263449;
+    margin-bottom: 10px;
+}
+
+.seasonal-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #c8d8e8;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.seasonal-form button {
+    background-color: #142b4a;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.seasonal-form button:hover {
+    background-color: #4a90c3;
+}
+
+/* Seasonal Advice Result */
+
+.seasonal-message {
+    background-color: #e8f3fa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #4a90c3;
+    text-align: left;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.about-container h2 {
+    color: #142b4a;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.about-container h2:first-child {
+    margin-top: 0;
+}
+
+.about-container p {
+    color: #263449;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
